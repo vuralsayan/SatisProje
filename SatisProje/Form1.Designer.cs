@@ -76,7 +76,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(614, 234);
+            this.dataGridView2.Size = new System.Drawing.Size(614, 266);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
@@ -306,7 +306,7 @@
             this.groupBox3.Controls.Add(this.BtnPersonelEkle);
             this.groupBox3.Controls.Add(this.TxtPersonelAd);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Location = new System.Drawing.Point(639, 284);
+            this.groupBox3.Location = new System.Drawing.Point(7, 493);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(318, 205);
             this.groupBox3.TabIndex = 27;
@@ -380,7 +380,7 @@
             // 
             this.dataGridViewPersonel.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPersonel.Location = new System.Drawing.Point(963, 298);
+            this.dataGridViewPersonel.Location = new System.Drawing.Point(331, 507);
             this.dataGridViewPersonel.Name = "dataGridViewPersonel";
             this.dataGridViewPersonel.RowHeadersWidth = 51;
             this.dataGridViewPersonel.RowTemplate.Height = 24;
@@ -392,7 +392,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 685);
+            this.ClientSize = new System.Drawing.Size(1260, 716);
             this.Controls.Add(this.dataGridViewPersonel);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
