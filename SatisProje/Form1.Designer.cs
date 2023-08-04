@@ -61,25 +61,25 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridViewPersonel = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtUrunAd = new System.Windows.Forms.TextBox();
+            this.TxtUrunAdet = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtAlFiyat = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtSatFiyat = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewUrun = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnUrunEkle = new System.Windows.Forms.Button();
+            this.BtnUrunSil = new System.Windows.Forms.Button();
+            this.BtnUrunGuncelle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMusteri)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrun)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -412,19 +412,19 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "Ürün Ad:";
             // 
-            // textBox1
+            // TxtUrunAd
             // 
-            this.textBox1.Location = new System.Drawing.Point(147, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 30);
-            this.textBox1.TabIndex = 30;
+            this.TxtUrunAd.Location = new System.Drawing.Point(147, 33);
+            this.TxtUrunAd.Name = "TxtUrunAd";
+            this.TxtUrunAd.Size = new System.Drawing.Size(189, 30);
+            this.TxtUrunAd.TabIndex = 30;
             // 
-            // textBox2
+            // TxtUrunAdet
             // 
-            this.textBox2.Location = new System.Drawing.Point(147, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 30);
-            this.textBox2.TabIndex = 32;
+            this.TxtUrunAdet.Location = new System.Drawing.Point(147, 69);
+            this.TxtUrunAdet.Name = "TxtUrunAdet";
+            this.TxtUrunAdet.Size = new System.Drawing.Size(189, 30);
+            this.TxtUrunAdet.TabIndex = 32;
             // 
             // label10
             // 
@@ -435,12 +435,12 @@
             this.label10.TabIndex = 31;
             this.label10.Text = "Ürün Adet:";
             // 
-            // textBox3
+            // TxtAlFiyat
             // 
-            this.textBox3.Location = new System.Drawing.Point(147, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(189, 30);
-            this.textBox3.TabIndex = 34;
+            this.TxtAlFiyat.Location = new System.Drawing.Point(147, 109);
+            this.TxtAlFiyat.Name = "TxtAlFiyat";
+            this.TxtAlFiyat.Size = new System.Drawing.Size(189, 30);
+            this.TxtAlFiyat.TabIndex = 34;
             // 
             // label11
             // 
@@ -451,12 +451,12 @@
             this.label11.TabIndex = 33;
             this.label11.Text = "Alış Fiyatı:";
             // 
-            // textBox4
+            // TxtSatFiyat
             // 
-            this.textBox4.Location = new System.Drawing.Point(147, 149);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(189, 30);
-            this.textBox4.TabIndex = 36;
+            this.TxtSatFiyat.Location = new System.Drawing.Point(147, 149);
+            this.TxtSatFiyat.Name = "TxtSatFiyat";
+            this.TxtSatFiyat.Size = new System.Drawing.Size(189, 30);
+            this.TxtSatFiyat.TabIndex = 36;
             // 
             // label12
             // 
@@ -467,29 +467,29 @@
             this.label12.TabIndex = 35;
             this.label12.Text = "Satış Fiyatı:";
             // 
-            // dataGridView1
+            // dataGridViewUrun
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(645, 507);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(614, 190);
-            this.dataGridView1.TabIndex = 37;
+            this.dataGridViewUrun.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewUrun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUrun.Location = new System.Drawing.Point(645, 507);
+            this.dataGridViewUrun.Name = "dataGridViewUrun";
+            this.dataGridViewUrun.RowHeadersWidth = 51;
+            this.dataGridViewUrun.RowTemplate.Height = 24;
+            this.dataGridViewUrun.Size = new System.Drawing.Size(614, 190);
+            this.dataGridViewUrun.TabIndex = 37;
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.BtnUrunGuncelle);
+            this.groupBox4.Controls.Add(this.BtnUrunSil);
+            this.groupBox4.Controls.Add(this.BtnUrunEkle);
+            this.groupBox4.Controls.Add(this.TxtUrunAd);
             this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.TxtSatFiyat);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.textBox2);
-            this.groupBox4.Controls.Add(this.textBox3);
+            this.groupBox4.Controls.Add(this.TxtUrunAdet);
+            this.groupBox4.Controls.Add(this.TxtAlFiyat);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Location = new System.Drawing.Point(639, 284);
             this.groupBox4.Name = "groupBox4";
@@ -498,32 +498,32 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ürün İşlemleri";
             // 
-            // button1
+            // BtnUrunEkle
             // 
-            this.button1.Location = new System.Drawing.Point(349, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 36);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnUrunEkle.Location = new System.Drawing.Point(349, 32);
+            this.BtnUrunEkle.Name = "BtnUrunEkle";
+            this.BtnUrunEkle.Size = new System.Drawing.Size(130, 36);
+            this.BtnUrunEkle.TabIndex = 26;
+            this.BtnUrunEkle.Text = "Ekle";
+            this.BtnUrunEkle.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // BtnUrunSil
             // 
-            this.button2.Location = new System.Drawing.Point(349, 87);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 36);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Sil";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnUrunSil.Location = new System.Drawing.Point(349, 87);
+            this.BtnUrunSil.Name = "BtnUrunSil";
+            this.BtnUrunSil.Size = new System.Drawing.Size(130, 36);
+            this.BtnUrunSil.TabIndex = 37;
+            this.BtnUrunSil.Text = "Sil";
+            this.BtnUrunSil.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // BtnUrunGuncelle
             // 
-            this.button3.Location = new System.Drawing.Point(349, 142);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 36);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "Güncelle";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnUrunGuncelle.Location = new System.Drawing.Point(349, 142);
+            this.BtnUrunGuncelle.Name = "BtnUrunGuncelle";
+            this.BtnUrunGuncelle.Size = new System.Drawing.Size(130, 36);
+            this.BtnUrunGuncelle.TabIndex = 26;
+            this.BtnUrunGuncelle.Text = "Güncelle";
+            this.BtnUrunGuncelle.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -531,7 +531,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1441, 716);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewUrun);
             this.Controls.Add(this.dataGridViewPersonel);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -553,7 +553,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrun)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -594,18 +594,18 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridViewPersonel;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtUrunAd;
+        private System.Windows.Forms.TextBox TxtUrunAdet;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtAlFiyat;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtSatFiyat;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewUrun;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnUrunGuncelle;
+        private System.Windows.Forms.Button BtnUrunSil;
+        private System.Windows.Forms.Button BtnUrunEkle;
     }
 }
 

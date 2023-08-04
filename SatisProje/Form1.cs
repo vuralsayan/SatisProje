@@ -97,6 +97,12 @@ namespace SatisProje
             da6.Fill(dt6);
             dataGridViewPersonel.DataSource = dt6;
 
+            //Ürün İşlemleri Load
+            SqlCommand komut7 = new SqlCommand("Select * From URUNLER", baglanti);
+            SqlDataAdapter da7 = new SqlDataAdapter(komut7);
+            DataTable dt7 = new DataTable();    
+            da7.Fill(dt7);
+            dataGridViewUrun.DataSource = dt7;
         }
 
         private void BtnKaydet_Click(object sender, EventArgs e)
