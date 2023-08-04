@@ -59,13 +59,13 @@
             this.BtnPersonelEkle = new System.Windows.Forms.Button();
             this.TxtPersonelAd = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewPersonel = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMusteri)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonel)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -329,6 +329,7 @@
             this.BtnPersonelGuncelle.TabIndex = 25;
             this.BtnPersonelGuncelle.Text = "Güncelle";
             this.BtnPersonelGuncelle.UseVisualStyleBackColor = true;
+            this.BtnPersonelGuncelle.Click += new System.EventHandler(this.BtnPersonelGuncelle_Click);
             // 
             // label7
             // 
@@ -347,6 +348,7 @@
             this.BtnPersonelSil.TabIndex = 24;
             this.BtnPersonelSil.Text = "Sil";
             this.BtnPersonelSil.UseVisualStyleBackColor = true;
+            this.BtnPersonelSil.Click += new System.EventHandler(this.BtnPersonelSil_Click);
             // 
             // BtnPersonelEkle
             // 
@@ -356,6 +358,7 @@
             this.BtnPersonelEkle.TabIndex = 19;
             this.BtnPersonelEkle.Text = "Ekle";
             this.BtnPersonelEkle.UseVisualStyleBackColor = true;
+            this.BtnPersonelEkle.Click += new System.EventHandler(this.BtnPersonelEkle_Click);
             // 
             // TxtPersonelAd
             // 
@@ -373,23 +376,24 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "ID:";
             // 
-            // dataGridView1
+            // dataGridViewPersonel
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(963, 298);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(302, 191);
-            this.dataGridView1.TabIndex = 28;
+            this.dataGridViewPersonel.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPersonel.Location = new System.Drawing.Point(963, 298);
+            this.dataGridViewPersonel.Name = "dataGridViewPersonel";
+            this.dataGridViewPersonel.RowHeadersWidth = 51;
+            this.dataGridViewPersonel.RowTemplate.Height = 24;
+            this.dataGridViewPersonel.Size = new System.Drawing.Size(302, 191);
+            this.dataGridViewPersonel.TabIndex = 28;
+            this.dataGridViewPersonel.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPersonel_CellDoubleClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1333, 685);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewPersonel);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridViewMusteri);
@@ -398,6 +402,7 @@
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Satış İşlemleri";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -408,7 +413,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -445,7 +450,7 @@
         private System.Windows.Forms.Button BtnPersonelEkle;
         private System.Windows.Forms.TextBox TxtPersonelAd;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewPersonel;
     }
 }
 

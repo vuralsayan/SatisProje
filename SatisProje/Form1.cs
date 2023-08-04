@@ -39,6 +39,15 @@ namespace SatisProje
             dataGridViewMusteri.DataSource = dt5;
         }
 
+        private void PersonelListele()
+        {
+            SqlCommand komut = new SqlCommand("Select * From PERSONELLER", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridViewPersonel.DataSource = dt;
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -80,6 +89,14 @@ namespace SatisProje
             DataTable dt5 = new DataTable();
             da5.Fill(dt5);
             dataGridViewMusteri.DataSource = dt5;
+
+            //Personel İşlemleri Load
+            SqlCommand komut6 = new SqlCommand("Select ID, AD as 'AD SOYAD' From PERSONELLER", baglanti);
+            SqlDataAdapter da6 = new SqlDataAdapter(komut6);
+            DataTable dt6 = new DataTable();
+            da6.Fill(dt6);
+            dataGridViewPersonel.DataSource = dt6;
+
         }
 
         private void BtnKaydet_Click(object sender, EventArgs e)
@@ -121,7 +138,6 @@ namespace SatisProje
             baglanti.Close();
             Listele();
             MessageBox.Show("Satış Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
 
         private void BtnMusteriEkle_Click(object sender, EventArgs e)
@@ -166,6 +182,50 @@ namespace SatisProje
             baglanti.Close();
             MessageBox.Show("Müşteri Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             MusteriListele();
+        }
+
+        private void dataGridViewPersonel_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridViewPersonel.SelectedCells[0].RowIndex;   
+            TxtPersonelID.Text = dataGridViewPersonel.Rows[secilen].Cells[0].Value.ToString();
+            TxtPersonelAd.Text = dataGridViewPersonel.Rows[secilen].Cells[1].Value.ToString();
+        }
+
+        private void BtnPersonelEkle_Click(object sender, EventArgs e)
+        {
+            //Personel Ekleme
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("INSERT INTO PERSONELLER (AD) VALUES(@P1)", baglanti);
+            komut.Parameters.AddWithValue("@P1", TxtPersonelAd.Text);   
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Personel Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            PersonelListele();
+        }
+
+        private void BtnPersonelSil_Click(object sender, EventArgs e)
+        {
+            // Personel Silme
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("DELETE FROM PERSONELLER WHERE ID=@P1",baglanti);
+            komut.Parameters.AddWithValue("@P1", TxtPersonelID.Text);
+            komut.ExecuteNonQuery();    
+            baglanti.Close();
+            MessageBox.Show("Personel Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            PersonelListele();
+        }
+
+        private void BtnPersonelGuncelle_Click(object sender, EventArgs e)
+        {
+            // Personel Güncelleme
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("UPDATE PERSONELLER SET AD=@P1 WHERE ID=@P2", baglanti);
+            komut.Parameters.AddWithValue("@P1", TxtPersonelAd.Text);
+            komut.Parameters.AddWithValue("@P2", TxtPersonelID.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Personel Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            PersonelListele();
         }
     }
 }
