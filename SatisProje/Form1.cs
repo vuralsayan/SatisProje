@@ -48,10 +48,19 @@ namespace SatisProje
             dataGridViewPersonel.DataSource = dt;
         }
 
+        private void UrunListele()
+        {
+            SqlCommand komut = new SqlCommand("Select * From URUNLER", baglanti);
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridViewUrun.DataSource = dt;
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter("Execute Satis",baglanti);  // DataAdapter, veritabanı ile arayüz arasında köprü görevi görür.
+            SqlDataAdapter da = new SqlDataAdapter("Execute Satis", baglanti);  // DataAdapter, veritabanı ile arayüz arasında köprü görevi görür.
             DataTable dt = new DataTable();                                   // DataTable, veritabanından gelen verileri tutar.
             da.Fill(dt);                                                     // Fill metodu, veritabanından gelen verileri DataTable'a doldurur.
             dataGridView2.DataSource = dt;
@@ -61,13 +70,13 @@ namespace SatisProje
             SqlDataAdapter da2 = new SqlDataAdapter(komut2);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
-            CmbUrun.ValueMember = "ID";   
+            CmbUrun.ValueMember = "ID";
             CmbUrun.DisplayMember = "AD";
             CmbUrun.DataSource = dt2;
 
             //Müşterileri Çekme
             SqlCommand komut3 = new SqlCommand("Select * From MUSTERILER", baglanti);
-            SqlDataAdapter da3 = new SqlDataAdapter(komut3); 
+            SqlDataAdapter da3 = new SqlDataAdapter(komut3);
             DataTable dt3 = new DataTable();
             da3.Fill(dt3);
             CmbMusteri.ValueMember = "ID";
@@ -77,11 +86,11 @@ namespace SatisProje
             //Personelleri Çekme    
             SqlCommand komut4 = new SqlCommand("Select * From PERSONELLER", baglanti);
             SqlDataAdapter da4 = new SqlDataAdapter(komut4);
-            DataTable dt4 = new DataTable();    
+            DataTable dt4 = new DataTable();
             da4.Fill(dt4);
             CmbPersonel.ValueMember = "ID";
             CmbPersonel.DisplayMember = "AD";
-            CmbPersonel.DataSource = dt4;   
+            CmbPersonel.DataSource = dt4;
 
             //Müşteri İşlemleri Load
             SqlCommand komut5 = new SqlCommand("Select ID, ADSOYAD as 'AD SOYAD' From MUSTERILER", baglanti);
@@ -100,7 +109,7 @@ namespace SatisProje
             //Ürün İşlemleri Load
             SqlCommand komut7 = new SqlCommand("Select * From URUNLER", baglanti);
             SqlDataAdapter da7 = new SqlDataAdapter(komut7);
-            DataTable dt7 = new DataTable();    
+            DataTable dt7 = new DataTable();
             da7.Fill(dt7);
             dataGridViewUrun.DataSource = dt7;
         }
@@ -108,14 +117,14 @@ namespace SatisProje
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("INSERT INTO HAREKETLER (URUN, MUSTERI, PERSONEL, FIYAT) VALUES(@P1,@P2,@P3,@P4)",baglanti);
+            SqlCommand komut = new SqlCommand("INSERT INTO HAREKETLER (URUN, MUSTERI, PERSONEL, FIYAT) VALUES(@P1,@P2,@P3,@P4)", baglanti);
             komut.Parameters.AddWithValue("@P1", CmbUrun.SelectedValue);
             komut.Parameters.AddWithValue("@P2", CmbMusteri.SelectedValue);
             komut.Parameters.AddWithValue("@P3", CmbPersonel.SelectedValue);
             komut.Parameters.AddWithValue("@P4", TxtFiyat.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Satış Eklendi","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Satış Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Listele();
         }
 
@@ -123,7 +132,7 @@ namespace SatisProje
         {
             //Seçilen satırın bilgilerini comboboxlara aktarma
             int secilen = dataGridView2.SelectedCells[0].RowIndex;
-            TxtID.Text = dataGridView2.Rows[secilen].Cells[0].Value.ToString(); 
+            TxtID.Text = dataGridView2.Rows[secilen].Cells[0].Value.ToString();
             CmbUrun.Text = dataGridView2.Rows[secilen].Cells[1].Value.ToString();
             CmbMusteri.Text = dataGridView2.Rows[secilen].Cells[2].Value.ToString();
             CmbPersonel.Text = dataGridView2.Rows[secilen].Cells[3].Value.ToString();
@@ -134,8 +143,8 @@ namespace SatisProje
         {
             //Seçilen satırın bilgilerini güncelleme
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("UPDATE HAREKETLER SET URUN=@P1, MUSTERI=@P2, PERSONEL=@P3, FIYAT=@P4 WHERE HAREKETID=@P5", baglanti);   
-            komut.Parameters.AddWithValue("@P1", CmbUrun.SelectedValue);    
+            SqlCommand komut = new SqlCommand("UPDATE HAREKETLER SET URUN=@P1, MUSTERI=@P2, PERSONEL=@P3, FIYAT=@P4 WHERE HAREKETID=@P5", baglanti);
+            komut.Parameters.AddWithValue("@P1", CmbUrun.SelectedValue);
             komut.Parameters.AddWithValue("@P2", CmbMusteri.SelectedValue);
             komut.Parameters.AddWithValue("@P3", CmbPersonel.SelectedValue);
             komut.Parameters.AddWithValue("@P4", TxtFiyat.Text);
@@ -150,12 +159,12 @@ namespace SatisProje
         {
             //Müşteri Ekleme
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("INSERT INTO MUSTERILER (ADSOYAD) VALUES(@P1)",baglanti);
+            SqlCommand komut = new SqlCommand("INSERT INTO MUSTERILER (ADSOYAD) VALUES(@P1)", baglanti);
             komut.Parameters.AddWithValue("@P1", TxtMusteriAd.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Müşteri Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            MusteriListele();   
+            MusteriListele();
         }
 
         private void dataGridViewMusteri_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -169,7 +178,7 @@ namespace SatisProje
         {
             //Müşteri Silme
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("DELETE FROM MUSTERILER WHERE ID=@P1",baglanti);
+            SqlCommand komut = new SqlCommand("DELETE FROM MUSTERILER WHERE ID=@P1", baglanti);
             komut.Parameters.AddWithValue("@P1", TxtMusteriID.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
@@ -192,7 +201,7 @@ namespace SatisProje
 
         private void dataGridViewPersonel_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int secilen = dataGridViewPersonel.SelectedCells[0].RowIndex;   
+            int secilen = dataGridViewPersonel.SelectedCells[0].RowIndex;
             TxtPersonelID.Text = dataGridViewPersonel.Rows[secilen].Cells[0].Value.ToString();
             TxtPersonelAd.Text = dataGridViewPersonel.Rows[secilen].Cells[1].Value.ToString();
         }
@@ -202,7 +211,7 @@ namespace SatisProje
             //Personel Ekleme
             baglanti.Open();
             SqlCommand komut = new SqlCommand("INSERT INTO PERSONELLER (AD) VALUES(@P1)", baglanti);
-            komut.Parameters.AddWithValue("@P1", TxtPersonelAd.Text);   
+            komut.Parameters.AddWithValue("@P1", TxtPersonelAd.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Personel Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -213,9 +222,9 @@ namespace SatisProje
         {
             // Personel Silme
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("DELETE FROM PERSONELLER WHERE ID=@P1",baglanti);
+            SqlCommand komut = new SqlCommand("DELETE FROM PERSONELLER WHERE ID=@P1", baglanti);
             komut.Parameters.AddWithValue("@P1", TxtPersonelID.Text);
-            komut.ExecuteNonQuery();    
+            komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Personel Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             PersonelListele();
@@ -233,6 +242,20 @@ namespace SatisProje
             MessageBox.Show("Personel Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             PersonelListele();
         }
+
+        private void BtnUrunEkle_Click(object sender, EventArgs e)
+        {
+            // Ürün Ekleme
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("INSERT INTO URUNLER (AD, STOK, ALISFIYAT, SATISFIYAT) VALUES(@P1,@P2,@P3,@P4)", baglanti);
+            komut.Parameters.AddWithValue("@P1", TxtUrunAd.Text);
+            komut.Parameters.AddWithValue("@P2", (TxtUrunAdet.Text));
+            komut.Parameters.AddWithValue("@P3", (TxtAlFiyat.Text));
+            komut.Parameters.AddWithValue("@P4", (TxtSatFiyat.Text));
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Ürün Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            UrunListele();
+        }
     }
 }
- 

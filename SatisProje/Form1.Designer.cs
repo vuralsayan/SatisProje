@@ -414,14 +414,14 @@
             // 
             // TxtUrunAd
             // 
-            this.TxtUrunAd.Location = new System.Drawing.Point(147, 33);
+            this.TxtUrunAd.Location = new System.Drawing.Point(133, 33);
             this.TxtUrunAd.Name = "TxtUrunAd";
             this.TxtUrunAd.Size = new System.Drawing.Size(189, 30);
             this.TxtUrunAd.TabIndex = 30;
             // 
             // TxtUrunAdet
             // 
-            this.TxtUrunAdet.Location = new System.Drawing.Point(147, 69);
+            this.TxtUrunAdet.Location = new System.Drawing.Point(133, 69);
             this.TxtUrunAdet.Name = "TxtUrunAdet";
             this.TxtUrunAdet.Size = new System.Drawing.Size(189, 30);
             this.TxtUrunAdet.TabIndex = 32;
@@ -437,7 +437,7 @@
             // 
             // TxtAlFiyat
             // 
-            this.TxtAlFiyat.Location = new System.Drawing.Point(147, 109);
+            this.TxtAlFiyat.Location = new System.Drawing.Point(133, 109);
             this.TxtAlFiyat.Name = "TxtAlFiyat";
             this.TxtAlFiyat.Size = new System.Drawing.Size(189, 30);
             this.TxtAlFiyat.TabIndex = 34;
@@ -453,7 +453,7 @@
             // 
             // TxtSatFiyat
             // 
-            this.TxtSatFiyat.Location = new System.Drawing.Point(147, 149);
+            this.TxtSatFiyat.Location = new System.Drawing.Point(133, 149);
             this.TxtSatFiyat.Name = "TxtSatFiyat";
             this.TxtSatFiyat.Size = new System.Drawing.Size(189, 30);
             this.TxtSatFiyat.TabIndex = 36;
@@ -500,16 +500,17 @@
             // 
             // BtnUrunEkle
             // 
-            this.BtnUrunEkle.Location = new System.Drawing.Point(349, 32);
+            this.BtnUrunEkle.Location = new System.Drawing.Point(335, 32);
             this.BtnUrunEkle.Name = "BtnUrunEkle";
             this.BtnUrunEkle.Size = new System.Drawing.Size(130, 36);
             this.BtnUrunEkle.TabIndex = 26;
             this.BtnUrunEkle.Text = "Ekle";
             this.BtnUrunEkle.UseVisualStyleBackColor = true;
+            this.BtnUrunEkle.Click += new System.EventHandler(this.BtnUrunEkle_Click);
             // 
             // BtnUrunSil
             // 
-            this.BtnUrunSil.Location = new System.Drawing.Point(349, 87);
+            this.BtnUrunSil.Location = new System.Drawing.Point(335, 87);
             this.BtnUrunSil.Name = "BtnUrunSil";
             this.BtnUrunSil.Size = new System.Drawing.Size(130, 36);
             this.BtnUrunSil.TabIndex = 37;
@@ -518,7 +519,7 @@
             // 
             // BtnUrunGuncelle
             // 
-            this.BtnUrunGuncelle.Location = new System.Drawing.Point(349, 142);
+            this.BtnUrunGuncelle.Location = new System.Drawing.Point(335, 142);
             this.BtnUrunGuncelle.Name = "BtnUrunGuncelle";
             this.BtnUrunGuncelle.Size = new System.Drawing.Size(130, 36);
             this.BtnUrunGuncelle.TabIndex = 26;
