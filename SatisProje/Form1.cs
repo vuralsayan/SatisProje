@@ -22,9 +22,6 @@ namespace SatisProje
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dbSatisDataSet.Satis' table. You can move, or remove it, as needed.
-            this.satisTableAdapter.Fill(this.dbSatisDataSet.Satis);
-
             SqlDataAdapter da = new SqlDataAdapter("Execute Satis",baglanti); // DataAdapter, veritabanı ile arayüz arasında köprü görevi görür.
             DataTable dt = new DataTable();                // DataTable, veritabanından gelen verileri tutar.
             da.Fill(dt);                                    // Fill metodu, veritabanından gelen verileri DataTable'a doldurur.
