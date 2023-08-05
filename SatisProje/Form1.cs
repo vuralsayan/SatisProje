@@ -31,7 +31,6 @@ namespace SatisProje
 
         private void MusteriListele()
         {
-            //Müşteri İşlemleri Load
             SqlCommand komut5 = new SqlCommand("Select * From MUSTERILER", baglanti);
             SqlDataAdapter da5 = new SqlDataAdapter(komut5);
             DataTable dt5 = new DataTable();
@@ -50,11 +49,41 @@ namespace SatisProje
 
         private void UrunListele()
         {
-            SqlCommand komut = new SqlCommand("Select * From URUNLER", baglanti);
+            SqlCommand komut = new SqlCommand("Select ID,AD, STOK, ALISFIYAT as 'ALIŞ FİYAT', SATISFIYAT as 'SATIŞ FİYAT' From URUNLER", baglanti);
             SqlDataAdapter da = new SqlDataAdapter(komut);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridViewUrun.DataSource = dt;
+        }
+
+        private void Yenile()
+        {
+            //Ürünleri Çekme
+            SqlCommand komut2 = new SqlCommand("Select * From URUNLER", baglanti);
+            SqlDataAdapter da2 = new SqlDataAdapter(komut2);
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+            CmbUrun.ValueMember = "ID";
+            CmbUrun.DisplayMember = "AD";
+            CmbUrun.DataSource = dt2;
+
+            //Müşterileri Çekme
+            SqlCommand komut3 = new SqlCommand("Select * From MUSTERILER", baglanti);
+            SqlDataAdapter da3 = new SqlDataAdapter(komut3);
+            DataTable dt3 = new DataTable();
+            da3.Fill(dt3);
+            CmbMusteri.ValueMember = "ID";
+            CmbMusteri.DisplayMember = "ADSOYAD";
+            CmbMusteri.DataSource = dt3;
+
+            //Personelleri Çekme    
+            SqlCommand komut4 = new SqlCommand("Select * From PERSONELLER", baglanti);
+            SqlDataAdapter da4 = new SqlDataAdapter(komut4);
+            DataTable dt4 = new DataTable();
+            da4.Fill(dt4);
+            CmbPersonel.ValueMember = "ID";
+            CmbPersonel.DisplayMember = "AD";
+            CmbPersonel.DataSource = dt4;
         }
 
 
@@ -107,7 +136,7 @@ namespace SatisProje
             dataGridViewPersonel.DataSource = dt6;
 
             //Ürün İşlemleri Load
-            SqlCommand komut7 = new SqlCommand("Select * From URUNLER", baglanti);
+            SqlCommand komut7 = new SqlCommand("Select ID,AD, STOK, ALISFIYAT as 'ALIŞ FİYAT', SATISFIYAT as 'SATIŞ FİYAT' From URUNLER", baglanti);
             SqlDataAdapter da7 = new SqlDataAdapter(komut7);
             DataTable dt7 = new DataTable();
             da7.Fill(dt7);
@@ -163,7 +192,8 @@ namespace SatisProje
             komut.Parameters.AddWithValue("@P1", TxtMusteriAd.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Müşteri Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string message = "Müşteri Eklendi" + Environment.NewLine + "Lütfen sistemi güncelleyin";
+            MessageBox.Show(message, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             MusteriListele();
         }
 
@@ -182,7 +212,8 @@ namespace SatisProje
             komut.Parameters.AddWithValue("@P1", TxtMusteriID.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Müşteri Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string message = "Müşteri Silindi" + Environment.NewLine + "Lütfen sistemi güncelleyin";
+            MessageBox.Show(message, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             MusteriListele();
         }
 
@@ -195,7 +226,8 @@ namespace SatisProje
             komut.Parameters.AddWithValue("@P2", TxtMusteriID.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Müşteri Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string message = "Müşteri Güncellendi" + Environment.NewLine + "Lütfen sistemi güncelleyin";
+            MessageBox.Show(message, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             MusteriListele();
         }
 
@@ -214,7 +246,8 @@ namespace SatisProje
             komut.Parameters.AddWithValue("@P1", TxtPersonelAd.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Personel Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string message = "Personel Eklendi" + Environment.NewLine + "Lütfen sistemi güncelleyin";
+            MessageBox.Show(message, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             PersonelListele();
         }
 
@@ -226,7 +259,8 @@ namespace SatisProje
             komut.Parameters.AddWithValue("@P1", TxtPersonelID.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Personel Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string message = "Personel Silindi" + Environment.NewLine + "Lütfen sistemi güncelleyin";
+            MessageBox.Show(message, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             PersonelListele();
         }
 
@@ -239,7 +273,8 @@ namespace SatisProje
             komut.Parameters.AddWithValue("@P2", TxtPersonelID.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Personel Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string message = "Personel Güncellendi" + Environment.NewLine + "Lütfen sistemi güncelleyin";
+            MessageBox.Show(message, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             PersonelListele();
         }
 
@@ -254,7 +289,52 @@ namespace SatisProje
             komut.Parameters.AddWithValue("@P4", (TxtSatFiyat.Text));
             komut.ExecuteNonQuery();
             baglanti.Close();
-            MessageBox.Show("Ürün Eklendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string message = "Ürün Eklendi" + Environment.NewLine + "Lütfen sistemi güncelleyin";
+            MessageBox.Show(message, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            UrunListele();
+        }
+
+        private void BtnUrunSil_Click(object sender, EventArgs e)
+        {
+            // Ürün Silme
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("DELETE FROM URUNLER WHERE ID=@P1", baglanti);
+            komut.Parameters.AddWithValue("@P1", TxtUrunID.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            string message = "Ürün Silindi" + Environment.NewLine + "Lütfen sistemi güncelleyin";
+            MessageBox.Show(message, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            UrunListele();
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Yenile();
+        }
+
+        private void dataGridViewUrun_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridViewUrun.SelectedCells[0].RowIndex;
+            TxtUrunID.Text = dataGridViewUrun.Rows[secilen].Cells[0].Value.ToString();
+            TxtUrunAd.Text = dataGridViewUrun.Rows[secilen].Cells[1].Value.ToString();
+            TxtUrunAdet.Text = dataGridViewUrun.Rows[secilen].Cells[2].Value.ToString();
+            TxtAlFiyat.Text = dataGridViewUrun.Rows[secilen].Cells[3].Value.ToString();
+            TxtSatFiyat.Text = dataGridViewUrun.Rows[secilen].Cells[4].Value.ToString();
+        }
+
+        private void BtnUrunGuncelle_Click(object sender, EventArgs e)
+        {
+            // Ürün Güncelleme
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("UPDATE URUNLER SET AD=@P1, STOK=@P2, ALISFIYAT=@P3, SATISFIYAT=@P4 WHERE ID=@P5", baglanti);
+            komut.Parameters.AddWithValue("@P1", TxtUrunAd.Text);
+            komut.Parameters.AddWithValue("@P2", TxtUrunAdet.Text);
+            komut.Parameters.AddWithValue("@P3", TxtAlFiyat.Text);
+            komut.Parameters.AddWithValue("@P4", TxtSatFiyat.Text);
+            komut.Parameters.AddWithValue("@P5", TxtUrunID.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            string message = "Ürün Güncellendi" + Environment.NewLine + "Lütfen sistemi güncelleyin";
+            MessageBox.Show(message, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             UrunListele();
         }
     }
