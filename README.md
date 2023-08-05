@@ -1,3 +1,4 @@
 ## Satış - Müşteri - Personel - Ürün Takip Projesi
 
-<img src="2.png"> </img>
+<img src="ProjeSatis.png"> </img>
+
