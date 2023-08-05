@@ -43,6 +43,7 @@
             this.TxtID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.BtnMusteriEkle = new System.Windows.Forms.Button();
             this.dataGridViewMusteri = new System.Windows.Forms.DataGridView();
@@ -71,21 +72,23 @@
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridViewUrun = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.BtnHesapla = new System.Windows.Forms.Button();
+            this.TxtKar = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.BtnUrunGuncelle = new System.Windows.Forms.Button();
-            this.BtnUrunSil = new System.Windows.Forms.Button();
-            this.BtnUrunEkle = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TxtUrunID = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.BtnUrunSil = new System.Windows.Forms.Button();
+            this.BtnUrunEkle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMusteri)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPersonel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrun)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView2
@@ -96,7 +99,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(614, 266);
+            this.dataGridView2.Size = new System.Drawing.Size(859, 266);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
@@ -225,6 +228,18 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Satış İşlemleri";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1208, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label4
             // 
@@ -411,7 +426,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(33, 67);
+            this.label9.Location = new System.Drawing.Point(24, 67);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(92, 24);
             this.label9.TabIndex = 29;
@@ -419,14 +434,14 @@
             // 
             // TxtUrunAd
             // 
-            this.TxtUrunAd.Location = new System.Drawing.Point(133, 65);
+            this.TxtUrunAd.Location = new System.Drawing.Point(124, 65);
             this.TxtUrunAd.Name = "TxtUrunAd";
             this.TxtUrunAd.Size = new System.Drawing.Size(189, 30);
             this.TxtUrunAd.TabIndex = 30;
             // 
             // TxtUrunAdet
             // 
-            this.TxtUrunAdet.Location = new System.Drawing.Point(133, 101);
+            this.TxtUrunAdet.Location = new System.Drawing.Point(124, 101);
             this.TxtUrunAdet.Name = "TxtUrunAdet";
             this.TxtUrunAdet.Size = new System.Drawing.Size(189, 30);
             this.TxtUrunAdet.TabIndex = 32;
@@ -434,7 +449,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 107);
+            this.label10.Location = new System.Drawing.Point(7, 107);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 24);
             this.label10.TabIndex = 31;
@@ -442,7 +457,7 @@
             // 
             // TxtAlFiyat
             // 
-            this.TxtAlFiyat.Location = new System.Drawing.Point(133, 141);
+            this.TxtAlFiyat.Location = new System.Drawing.Point(124, 137);
             this.TxtAlFiyat.Name = "TxtAlFiyat";
             this.TxtAlFiyat.Size = new System.Drawing.Size(189, 30);
             this.TxtAlFiyat.TabIndex = 34;
@@ -450,7 +465,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(19, 147);
+            this.label11.Location = new System.Drawing.Point(10, 143);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(106, 24);
             this.label11.TabIndex = 33;
@@ -458,7 +473,7 @@
             // 
             // TxtSatFiyat
             // 
-            this.TxtSatFiyat.Location = new System.Drawing.Point(133, 181);
+            this.TxtSatFiyat.Location = new System.Drawing.Point(124, 177);
             this.TxtSatFiyat.Name = "TxtSatFiyat";
             this.TxtSatFiyat.Size = new System.Drawing.Size(189, 30);
             this.TxtSatFiyat.TabIndex = 36;
@@ -466,7 +481,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 187);
+            this.label12.Location = new System.Drawing.Point(1, 183);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(115, 24);
             this.label12.TabIndex = 35;
@@ -486,13 +501,16 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.BtnHesapla);
+            this.groupBox4.Controls.Add(this.TxtKar);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.BtnUrunGuncelle);
             this.groupBox4.Controls.Add(this.TxtUrunID);
             this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.BtnUrunGuncelle);
             this.groupBox4.Controls.Add(this.BtnUrunSil);
-            this.groupBox4.Controls.Add(this.BtnUrunEkle);
             this.groupBox4.Controls.Add(this.TxtUrunAd);
             this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.BtnUrunEkle);
             this.groupBox4.Controls.Add(this.TxtSatFiyat);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.label12);
@@ -501,14 +519,41 @@
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Location = new System.Drawing.Point(639, 284);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(485, 235);
+            this.groupBox4.Size = new System.Drawing.Size(615, 235);
             this.groupBox4.TabIndex = 38;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ürün İşlemleri";
             // 
+            // BtnHesapla
+            // 
+            this.BtnHesapla.Location = new System.Drawing.Point(476, 137);
+            this.BtnHesapla.Name = "BtnHesapla";
+            this.BtnHesapla.Size = new System.Drawing.Size(130, 36);
+            this.BtnHesapla.TabIndex = 42;
+            this.BtnHesapla.Text = "Hesapla";
+            this.BtnHesapla.UseVisualStyleBackColor = true;
+            this.BtnHesapla.Click += new System.EventHandler(this.BtnHesapla_Click);
+            // 
+            // TxtKar
+            // 
+            this.TxtKar.Location = new System.Drawing.Point(417, 26);
+            this.TxtKar.Name = "TxtKar";
+            this.TxtKar.ReadOnly = true;
+            this.TxtKar.Size = new System.Drawing.Size(189, 30);
+            this.TxtKar.TabIndex = 41;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(363, 30);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(48, 24);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "Kar:";
+            // 
             // BtnUrunGuncelle
             // 
-            this.BtnUrunGuncelle.Location = new System.Drawing.Point(335, 174);
+            this.BtnUrunGuncelle.Location = new System.Drawing.Point(330, 137);
             this.BtnUrunGuncelle.Name = "BtnUrunGuncelle";
             this.BtnUrunGuncelle.Size = new System.Drawing.Size(130, 36);
             this.BtnUrunGuncelle.TabIndex = 26;
@@ -516,9 +561,26 @@
             this.BtnUrunGuncelle.UseVisualStyleBackColor = true;
             this.BtnUrunGuncelle.Click += new System.EventHandler(this.BtnUrunGuncelle_Click);
             // 
+            // TxtUrunID
+            // 
+            this.TxtUrunID.Location = new System.Drawing.Point(124, 29);
+            this.TxtUrunID.Name = "TxtUrunID";
+            this.TxtUrunID.ReadOnly = true;
+            this.TxtUrunID.Size = new System.Drawing.Size(189, 30);
+            this.TxtUrunID.TabIndex = 39;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(24, 31);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(91, 24);
+            this.label13.TabIndex = 38;
+            this.label13.Text = "Ürün ID:";
+            // 
             // BtnUrunSil
             // 
-            this.BtnUrunSil.Location = new System.Drawing.Point(335, 119);
+            this.BtnUrunSil.Location = new System.Drawing.Point(476, 81);
             this.BtnUrunSil.Name = "BtnUrunSil";
             this.BtnUrunSil.Size = new System.Drawing.Size(130, 36);
             this.BtnUrunSil.TabIndex = 37;
@@ -528,7 +590,7 @@
             // 
             // BtnUrunEkle
             // 
-            this.BtnUrunEkle.Location = new System.Drawing.Point(335, 64);
+            this.BtnUrunEkle.Location = new System.Drawing.Point(330, 81);
             this.BtnUrunEkle.Name = "BtnUrunEkle";
             this.BtnUrunEkle.Size = new System.Drawing.Size(130, 36);
             this.BtnUrunEkle.TabIndex = 26;
@@ -536,39 +598,11 @@
             this.BtnUrunEkle.UseVisualStyleBackColor = true;
             this.BtnUrunEkle.Click += new System.EventHandler(this.BtnUrunEkle_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1393, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // TxtUrunID
-            // 
-            this.TxtUrunID.Location = new System.Drawing.Point(133, 29);
-            this.TxtUrunID.Name = "TxtUrunID";
-            this.TxtUrunID.Size = new System.Drawing.Size(189, 30);
-            this.TxtUrunID.TabIndex = 39;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(33, 31);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 24);
-            this.label13.TabIndex = 38;
-            this.label13.Text = "Ürün ID:";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1441, 716);
+            this.ClientSize = new System.Drawing.Size(1266, 704);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.dataGridViewUrun);
@@ -587,6 +621,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMusteri)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -596,7 +631,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUrun)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -650,6 +684,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox TxtUrunID;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox TxtKar;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button BtnHesapla;
     }
 }
 

@@ -337,5 +337,14 @@ namespace SatisProje
             MessageBox.Show(message, "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             UrunListele();
         }
+
+        private void BtnHesapla_Click(object sender, EventArgs e)
+        {
+            int alisFiyat = Convert.ToInt32(TxtAlFiyat.Text);
+            int satisFiyat = Convert.ToInt32(TxtSatFiyat.Text);
+            int fark = satisFiyat - alisFiyat;  
+            TxtKar.Text = fark.ToString();
+        }
+
     }
 }
