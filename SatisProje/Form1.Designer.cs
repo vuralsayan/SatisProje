@@ -95,11 +95,11 @@
             // 
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(343, 12);
+            this.dataGridView2.Location = new System.Drawing.Point(331, 12);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(859, 266);
+            this.dataGridView2.Size = new System.Drawing.Size(871, 266);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellDoubleClick);
             // 
@@ -209,7 +209,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
             this.groupBox1.Controls.Add(this.TxtID);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
@@ -222,9 +222,10 @@
             this.groupBox1.Controls.Add(this.CmbPersonel);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
             this.groupBox1.Location = new System.Drawing.Point(4, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(335, 276);
+            this.groupBox1.Size = new System.Drawing.Size(321, 276);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Satış İşlemleri";
@@ -264,11 +265,11 @@
             // 
             this.dataGridViewMusteri.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewMusteri.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMusteri.Location = new System.Drawing.Point(331, 298);
+            this.dataGridViewMusteri.Location = new System.Drawing.Point(331, 284);
             this.dataGridViewMusteri.Name = "dataGridViewMusteri";
             this.dataGridViewMusteri.RowHeadersWidth = 51;
             this.dataGridViewMusteri.RowTemplate.Height = 24;
-            this.dataGridViewMusteri.Size = new System.Drawing.Size(302, 191);
+            this.dataGridViewMusteri.Size = new System.Drawing.Size(302, 205);
             this.dataGridViewMusteri.TabIndex = 20;
             this.dataGridViewMusteri.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMusteri_CellDoubleClick);
             // 
@@ -318,6 +319,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.groupBox2.Controls.Add(this.TxtMusteriID);
             this.groupBox2.Controls.Add(this.BtnMusGuncelle);
             this.groupBox2.Controls.Add(this.label4);
@@ -325,6 +327,7 @@
             this.groupBox2.Controls.Add(this.BtnMusteriEkle);
             this.groupBox2.Controls.Add(this.TxtMusteriAd);
             this.groupBox2.Controls.Add(this.LblMusteriID);
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
             this.groupBox2.Location = new System.Drawing.Point(4, 284);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(318, 205);
@@ -334,6 +337,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.groupBox3.Controls.Add(this.TxtPersonelID);
             this.groupBox3.Controls.Add(this.BtnPersonelGuncelle);
             this.groupBox3.Controls.Add(this.label7);
@@ -341,9 +345,10 @@
             this.groupBox3.Controls.Add(this.BtnPersonelEkle);
             this.groupBox3.Controls.Add(this.TxtPersonelAd);
             this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
             this.groupBox3.Location = new System.Drawing.Point(7, 493);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(318, 205);
+            this.groupBox3.Size = new System.Drawing.Size(315, 205);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Personel İşlemleri";
@@ -415,11 +420,11 @@
             // 
             this.dataGridViewPersonel.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPersonel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPersonel.Location = new System.Drawing.Point(331, 507);
+            this.dataGridViewPersonel.Location = new System.Drawing.Point(331, 493);
             this.dataGridViewPersonel.Name = "dataGridViewPersonel";
             this.dataGridViewPersonel.RowHeadersWidth = 51;
             this.dataGridViewPersonel.RowTemplate.Height = 24;
-            this.dataGridViewPersonel.Size = new System.Drawing.Size(302, 191);
+            this.dataGridViewPersonel.Size = new System.Drawing.Size(302, 205);
             this.dataGridViewPersonel.TabIndex = 28;
             this.dataGridViewPersonel.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPersonel_CellDoubleClick);
             // 
@@ -491,16 +496,17 @@
             // 
             this.dataGridViewUrun.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUrun.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUrun.Location = new System.Drawing.Point(645, 525);
+            this.dataGridViewUrun.Location = new System.Drawing.Point(639, 525);
             this.dataGridViewUrun.Name = "dataGridViewUrun";
             this.dataGridViewUrun.RowHeadersWidth = 51;
             this.dataGridViewUrun.RowTemplate.Height = 24;
-            this.dataGridViewUrun.Size = new System.Drawing.Size(614, 172);
+            this.dataGridViewUrun.Size = new System.Drawing.Size(620, 172);
             this.dataGridViewUrun.TabIndex = 37;
             this.dataGridViewUrun.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUrun_CellDoubleClick);
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
             this.groupBox4.Controls.Add(this.BtnHesapla);
             this.groupBox4.Controls.Add(this.TxtKar);
             this.groupBox4.Controls.Add(this.label14);
@@ -517,6 +523,7 @@
             this.groupBox4.Controls.Add(this.TxtUrunAdet);
             this.groupBox4.Controls.Add(this.TxtAlFiyat);
             this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
             this.groupBox4.Location = new System.Drawing.Point(639, 284);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(615, 235);
@@ -526,9 +533,9 @@
             // 
             // BtnHesapla
             // 
-            this.BtnHesapla.Location = new System.Drawing.Point(476, 137);
+            this.BtnHesapla.Location = new System.Drawing.Point(476, 154);
             this.BtnHesapla.Name = "BtnHesapla";
-            this.BtnHesapla.Size = new System.Drawing.Size(130, 36);
+            this.BtnHesapla.Size = new System.Drawing.Size(130, 39);
             this.BtnHesapla.TabIndex = 42;
             this.BtnHesapla.Text = "Hesapla";
             this.BtnHesapla.UseVisualStyleBackColor = true;
@@ -553,9 +560,9 @@
             // 
             // BtnUrunGuncelle
             // 
-            this.BtnUrunGuncelle.Location = new System.Drawing.Point(330, 137);
+            this.BtnUrunGuncelle.Location = new System.Drawing.Point(330, 154);
             this.BtnUrunGuncelle.Name = "BtnUrunGuncelle";
-            this.BtnUrunGuncelle.Size = new System.Drawing.Size(130, 36);
+            this.BtnUrunGuncelle.Size = new System.Drawing.Size(130, 39);
             this.BtnUrunGuncelle.TabIndex = 26;
             this.BtnUrunGuncelle.Text = "Güncelle";
             this.BtnUrunGuncelle.UseVisualStyleBackColor = true;
@@ -582,7 +589,7 @@
             // 
             this.BtnUrunSil.Location = new System.Drawing.Point(476, 81);
             this.BtnUrunSil.Name = "BtnUrunSil";
-            this.BtnUrunSil.Size = new System.Drawing.Size(130, 36);
+            this.BtnUrunSil.Size = new System.Drawing.Size(130, 39);
             this.BtnUrunSil.TabIndex = 37;
             this.BtnUrunSil.Text = "Sil";
             this.BtnUrunSil.UseVisualStyleBackColor = true;
@@ -592,7 +599,7 @@
             // 
             this.BtnUrunEkle.Location = new System.Drawing.Point(330, 81);
             this.BtnUrunEkle.Name = "BtnUrunEkle";
-            this.BtnUrunEkle.Size = new System.Drawing.Size(130, 36);
+            this.BtnUrunEkle.Size = new System.Drawing.Size(130, 39);
             this.BtnUrunEkle.TabIndex = 26;
             this.BtnUrunEkle.Text = "Ekle";
             this.BtnUrunEkle.UseVisualStyleBackColor = true;
@@ -602,6 +609,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1266, 704);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
