@@ -319,7 +319,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
             this.groupBox2.Controls.Add(this.TxtMusteriID);
             this.groupBox2.Controls.Add(this.BtnMusGuncelle);
             this.groupBox2.Controls.Add(this.label4);
@@ -337,7 +337,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
             this.groupBox3.Controls.Add(this.TxtPersonelID);
             this.groupBox3.Controls.Add(this.BtnPersonelGuncelle);
             this.groupBox3.Controls.Add(this.label7);
@@ -506,7 +506,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
             this.groupBox4.Controls.Add(this.BtnHesapla);
             this.groupBox4.Controls.Add(this.TxtKar);
             this.groupBox4.Controls.Add(this.label14);
